@@ -1,0 +1,22 @@
+<!-- dashboard/dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to Our Bank Management System</h1>
+    <ul>
+        <li><a href="{% url 'bank_add' %}">Add Bank</a></li>
+        <li><a href="{% url 'branch_add' %}">Add Branch</a></li>
+    </ul>
+
+
+    <h1>Welcome to Our Account Management System</h1>
+    <ul>
+        <li><a href="{% url 'register' %}">Register</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+</body>
+</html>

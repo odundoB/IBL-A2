@@ -5,7 +5,7 @@ from .forms import BankForm, BranchForm
 
 class HomeView(View):
     def get(self, request):
-        return render(request, 'banks/home.html')
+        return render(request, 'dashboard/dashboard.html')
 
 class BankCreateView(View):
     def get(self, request):
@@ -16,7 +16,7 @@ class BankCreateView(View):
         form = BankForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('bank_add')
+            return redirect('dashboard')  # Redirect to the dashboard or another relevant page after adding a bank
         return render(request, 'banks/bank_form.html', {'form': form})
 
 class BranchCreateView(View):
@@ -28,5 +28,5 @@ class BranchCreateView(View):
         form = BranchForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('branch_add')
+            return redirect('dashboard')  # Redirect to the dashboard or another relevant page after adding a branch
         return render(request, 'banks/branch_form.html', {'form': form})

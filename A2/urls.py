@@ -3,5 +3,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('banks.urls')),  # Set banks app to handle root URL
+    path('', include('dashboard.urls')),  # Dashboard URLs
+    path('accounts/', include('accounts.urls')),  # Accounts URLs
+    path('banks/', include('banks.urls')),  # Banks URLs
 ]
+
+
