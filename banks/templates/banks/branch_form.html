@@ -5,6 +5,7 @@
 </head>
 <body>
     <h1>Add Branch</h1>
+    <p>Use this form to add a new branch to an existing bank. Please fill in all required details about the branch, including its location, address, and other relevant information. Ensure accuracy to successfully add the branch to our system.</p>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}

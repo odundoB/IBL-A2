@@ -5,6 +5,7 @@
 </head>
 <body>
     <h1>Add Bank</h1>
+    <p>Use this form to add a new bank to our system. Please provide the required details about the bank, including its name and other relevant information. Ensure all fields are filled out correctly to successfully add the bank.</p>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
